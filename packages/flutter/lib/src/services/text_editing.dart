@@ -16,8 +16,8 @@ class TextSelection extends TextRange {
   ///
   /// The [baseOffset] and [extentOffset] arguments must not be null.
   const TextSelection({
-    required this.baseOffset,
-    required this.extentOffset,
+    @required this.baseOffset,
+    @required this.extentOffset,
     this.affinity = TextAffinity.downstream,
     this.isDirectional = false,
   }) : super(
@@ -33,7 +33,7 @@ class TextSelection extends TextRange {
   ///
   /// The [offset] argument must not be null.
   const TextSelection.collapsed({
-    required int offset,
+    @required int offset,
     this.affinity = TextAffinity.downstream,
   }) : baseOffset = offset,
        extentOffset = offset,
